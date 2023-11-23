@@ -48,6 +48,18 @@ Please take some time to answer the following questions. Your answers should go 
 
 - Given more time, what would you suggest for improving the performance of this app?
 
+Improvements could be made in the handling of data. 
+
+I am pulling down a lot of data that I do not need. Some client-side logic got complicated, such as recursively traversing the evolutions to flatten the data structure. There also isn't any caching. From what I understand, this data would stay the same, so it would be better if we used some client caching mechanism to prevent us from making multiple API requests for the same data.
+
+We should also debounce/throttle our search input.
+
 - Is there anything you would consider doing if we were to go live with this app?
 
+There's cleanup I would do to the code. I would do a design review, ask questions and then go back and clean up my CSS. There also wasn't a real effort made to make this responsive. I describe a requirements question below that I had while programming it. I would need to get clarification on any details such as that. I would make the performance improvements I mentioned, at least debouncing the input.
+
 - What was the most challenging aspect of this work for you (if at all)?
+
+I had a difficult time figuring out how to display the moves. For bulbasuar there were around 80 moves, but the mockups only showed 4. I ended up limiting my results to the first 4 moves, but I was wondering if there was more appropriate logic to use based on the game's rules. For example, could my character be at some evolution stage that makes only certain moves valid? I tried to find this logic by looking at the data, but in the end, I didn't find anything that made sense to me.
+
+I also struggled with the formatting of the details section. I was surprised that the Types heading was left-aligned, but the Moves heading was center-aligned.
